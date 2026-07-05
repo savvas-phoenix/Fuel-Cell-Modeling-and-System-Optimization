@@ -1,0 +1,44 @@
+[System]
+Name='mamdanitype1_1'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=6
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Load'
+Range=[0 60]
+NumMFs=3
+MF1='Low':'trapmf',[-10 0 10 20]
+MF2='Medium':'trimf',[15 30 45]
+MF3='High':'trapmf',[40 50 60 70]
+
+[Input2]
+Name='SOC'
+Range=[0 100]
+NumMFs=3
+MF1='Low':'trapmf',[-10 0 30 45]
+MF2='Medium':'trimf',[35 55 75]
+MF3='High':'trapmf',[65 80 100 110]
+
+[Output1]
+Name='FC_Ref'
+Range=[0 60]
+NumMFs=3
+MF1='Low_Power':'trapmf',[-10 0 10 20]
+MF2='Efficient':'trimf',[10 20 30]
+MF3='Rated':'trapmf',[30 40 60 70]
+
+[Rules]
+1 1, 1 (1) : 1
+1 3, 1 (1) : 1
+2 3, 1 (1) : 1
+3 3, 2 (1) : 1
+3 1, 3 (1) : 1
+1 1, 2 (1) : 1
