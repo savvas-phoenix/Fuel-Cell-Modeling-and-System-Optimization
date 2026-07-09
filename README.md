@@ -28,3 +28,6 @@ Features
 Hydrogen Consumption Optimization: The DDPG agent specifically targets minimizing hydrogen usage under variable load profiles.
 
 Hybrid Management: Dynamic switching between Fuel Cell and Battery power using intelligent control logic.
+
+
+![System Model](Fuel_Cell_System.png)
