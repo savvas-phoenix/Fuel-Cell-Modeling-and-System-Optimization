@@ -1,3 +1,4 @@
+%Creator Savvas Eleftheriadis
 %% ============================================================
 %  DDPG Energy Management System
 %  Είσοδοι : I_load (A) , SOC (%)
